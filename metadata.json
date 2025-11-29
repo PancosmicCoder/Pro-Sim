@@ -1,0 +1,5 @@
+{
+  "name": "ProSim Circuit",
+  "description": "A professional-grade, web-based analog circuit simulator featuring MNA (Modified Nodal Analysis), real-time solving, and Gemini AI-powered circuit analysis.",
+  "requestFramePermissions": []
+}

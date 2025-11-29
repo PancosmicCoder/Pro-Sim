@@ -1,0 +1,21 @@
+{
+  "short_name": "ProSim",
+  "name": "ProSim Circuit Simulator",
+  "icons": [
+    {
+      "src": "https://unpkg.com/lucide-static@0.344.0/icons/zap.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://unpkg.com/lucide-static@0.344.0/icons/zap.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0f172a",
+  "background_color": "#0f172a",
+  "orientation": "landscape"
+}

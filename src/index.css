@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Removed strict touch-action to allow scrolling if needed, though app is mostly full screen */
+  color-scheme: dark;
+}
+
+body {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  /* Re-enable default web behaviors */
+  overflow: hidden; /* Keep hidden for full-screen layout */
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 3px;
+}
+
+/* Circuit Animations */
+@keyframes flow {
+  from { stroke-dashoffset: 16; }
+  to { stroke-dashoffset: 0; }
+}
+@keyframes flow-reverse {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: 16; }
+}
+.wire-flow {
+  animation: flow 1s linear infinite;
+}
+.wire-flow-reverse {
+  animation: flow-reverse 1s linear infinite;
+}
+
+/* Component Effects */
+@keyframes blast {
+  0% { transform: scale(0.5); opacity: 1; fill: #fbbf24; }
+  50% { transform: scale(1.5); opacity: 0.8; fill: #ef4444; }
+  100% { transform: scale(2.5); opacity: 0; fill: #7f1d1d; }
+}
+.blast-anim {
+  animation: blast 0.8s ease-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.shake-anim {
+  animation: shake 0.5s infinite;
+}
